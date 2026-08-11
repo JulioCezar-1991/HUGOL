@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>YouTube Player</title>
+    <title>Redirecionar</title>
+    <script>
+        function redirect() {
+            window.open("https://www.youtube.com/watch?v=RXhx1ZNAzQo&list=RDRXhx1ZNAzQo&start_radio=1&rv=fPO76Jlnz6c", "_blank");
+        }
+    </script>
 </head>
 <body>
-    <iframe 
-        width="560" 
-        height="315" 
-        src="https://www.youtube.com/embed/RXhx1ZNAzQo?list=RDRXhx1ZNAzQo&start_radio=1&autoplay=1" 
-        frameborder="0" 
-        allow="autoplay; encrypted-media" 
-        allowfullscreen>
-    </iframe>
+    <button onclick="redirect()">Abrir no YouTube</button>
 </body>
 </html>
