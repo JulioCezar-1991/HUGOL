@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Redirecionar</title>
+    <title>Redirecionando em 3 segundos...</title>
     <script>
-        function redirect() {
-            window.open("https://www.youtube.com/watch?v=RXhx1ZNAzQo&list=RDRXhx1ZNAzQo&start_radio=1&rv=fPO76Jlnz6c", "_blank");
-        }
+        setTimeout(function() {
+            window.location.href = "https://www.youtube.com/watch?v=RXhx1ZNAzQo&list=RDRXhx1ZNAzQo&start_radio=1&rv=fPO76Jlnz6c";
+        }, 3000);
     </script>
 </head>
 <body>
-    <button onclick="redirect()">Abrir no YouTube</button>
+    <h2>Você será redirecionado em 3 segundos...</h2>
+    <p>Se não funcionar, <a href="https://www.youtube.com/watch?v=RXhx1ZNAzQo&list=RDRXhx1ZNAzQo&start_radio=1&rv=fPO76Jlnz6c" target="_blank">clique aqui</a></p>
 </body>
 </html>
