@@ -3,105 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecionando para o YouTube...</title>
+    <title>YouTube</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            background: #0a0a0a;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #fff;
-            flex-direction: column;
-            gap: 20px;
-        }
-        
-        .loader {
-            width: 60px;
-            height: 60px;
-            border: 5px solid #333;
-            border-top: 5px solid #ff0000;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        p {
-            font-size: 18px;
-            color: #aaa;
-        }
-        
-        .youtube-icon {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-        
-        .btn {
-            margin-top: 20px;
-            padding: 12px 30px;
-            background: #ff0000;
-            color: #fff;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-        
-        .btn:hover {
-            background: #cc0000;
-        }
+        *{margin:0;padding:0;box-sizing:border-box}body{background:#0a0a0a;display:flex;justify-content:center;align-items:center;height:100vh;font-family:Arial,sans-serif;color:#fff;flex-direction:column;gap:20px}.loader{width:60px;height:60px;border:5px solid #333;border-top:5px solid #ff0000;border-radius:50%;animation:spin 1s linear infinite}@keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}p{font-size:18px;color:#aaa}.btn{padding:12px 30px;background:#ff0000;color:#fff;border:none;border-radius:6px;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block}.btn:hover{background:#cc0000}
     </style>
 </head>
 <body>
-    <div class="youtube-icon">▶️</div>
+    <div>▶️</div>
     <div class="loader"></div>
-    <p>Redirecionando para o YouTube em tela cheia...</p>
-    <a href="#" class="btn" id="manualLink">Clique aqui se não redirecionar</a>
-
+    <p>Redirecionando...</p>
+    <a href="#" class="btn" id="manualLink">Clique aqui</a>
     <script>
-        // URL do vídeo com parâmetros para abrir em tela cheia
-        const videoUrl = 'https://www.youtube.com/watch?v=fPO76Jlnz6c&fs=1&autoplay=1';
-        
-        // URL para abrir diretamente em tela cheia (funciona no YouTube)
-        const fullscreenUrl = 'https://www.youtube.com/watch?v=fPO76Jlnz6c&fs=1';
-        
-        // Função para redirecionar
-        function redirectToYouTube() {
-            // Tenta abrir em uma nova janela/janela atual
-            window.location.href = fullscreenUrl;
-        }
-        
-        // Redireciona automaticamente após 1.5 segundos
-        setTimeout(redirectToYouTube, 1500);
-        
-        // Link manual para caso o redirecionamento automático falhe
-        document.getElementById('manualLink').addEventListener('click', function(e) {
-            e.preventDefault();
-            redirectToYouTube();
-        });
-        
-        // Também redireciona ao clicar em qualquer lugar da página
-        document.addEventListener('click', function() {
-            // Evita múltiplos redirecionamentos
-            if (!window._redirected) {
-                window._redirected = true;
-                redirectToYouTube();
-            }
-        });
+        const url = 'https://www.youtube.com/watch?v=fPO76Jlnz6c&fs=1';
+        function redirect(){window.location.href=url}
+        setTimeout(redirect,1500);
+        document.getElementById('manualLink').addEventListener('click', e=>{e.preventDefault();redirect()});
     </script>
 </body>
 </html>
