@@ -1,15 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Redirecionando em 3 segundos...</title>
-    <script>
-        setTimeout(function() {
-            window.location.href = "https://www.youtube.com/watch?v=RXhx1ZNAzQo&list=RDRXhx1ZNAzQo&start_radio=1&rv=fPO76Jlnz6c";
-        }, 3000);
-    </script>
+    <title>YouTube Music</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            text-align: center;
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        
+        .youtube-btn {
+            display: inline-block;
+            background: #ff0000;
+            color: white;
+            padding: 18px 50px;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4);
+        }
+        
+        .youtube-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 0, 0, 0.5);
+            background: #cc0000;
+        }
+        
+        .youtube-btn:active {
+            transform: translateY(0px);
+        }
+        
+        .icon {
+            margin-right: 10px;
+        }
+        
+        .info {
+            margin-top: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-    <h2>Você será redirecionado em 3 segundos...</h2>
-    <p>Se não funcionar, <a href="https://www.youtube.com/watch?v=RXhx1ZNAzQo&list=RDRXhx1ZNAzQo&start_radio=1&rv=fPO76Jlnz6c" target="_blank">clique aqui</a></p>
+    <div class="container">
+        <h1>🎵 YouTube Music</h1>
+        <a href="https://www.youtube.com/watch?v=RXhx1ZNAzQo&list=RDRXhx1ZNAzQo&start_radio=1&rv=fPO76Jlnz6c" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="youtube-btn">
+            ▶ Abrir no YouTube
+        </a>
+        <p class="info">Clique no botão para abrir a playlist no YouTube</p>
+    </div>
 </body>
 </html>
